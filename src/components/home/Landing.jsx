@@ -7,7 +7,9 @@ import { trackEvent } from '../../analytics';
 import colors from '../../styles/colors';
 
 trackEvent('component_loaded');
-trackEvent('some_event', { count: 3 });
+trackEvent('track_sessions');
+trackEvent('track_pageview', 'pagename');
+trackEvent('track_errors');
 
 const HOME = content('pages.home');
 

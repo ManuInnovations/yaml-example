@@ -6,8 +6,8 @@ import Nav from './components/Nav';
 import './styles/main.css';
 import { init as initAnalytics } from './analytics';
 
-const API_KEY = '650e6f2fb2b64ddf563b71c1bceb7c32e07424a4';
-const API_URL = 'http://localhost:32768';
+const API_KEY = '084f7619004822cdbe3a3964fcef826ff75a226e';
+const API_URL = 'http://localhost:1000';
 initAnalytics(API_KEY, API_URL);
 
 const Container = styled.div`
