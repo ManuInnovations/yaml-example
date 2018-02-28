@@ -6,8 +6,8 @@ import Nav from './components/Nav';
 import './styles/main.css';
 import { init as initAnalytics } from './analytics';
 
-const API_KEY = 'YOUR_API_KEY';
-const API_URL = 'http://analytics.typayroll.co.nz';
+const API_KEY = '650e6f2fb2b64ddf563b71c1bceb7c32e07424a4';
+const API_URL = 'http://localhost:32768';
 initAnalytics(API_KEY, API_URL);
 
 const Container = styled.div`
