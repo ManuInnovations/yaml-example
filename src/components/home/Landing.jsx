@@ -3,7 +3,11 @@ import { Link } from 'react-static';
 import styled from 'react-emotion';
 import { Images } from '../../assets';
 import content from '../../content';
+import { trackEvent } from '../../analytics';
 import colors from '../../styles/colors';
+
+trackEvent('component_loaded');
+trackEvent('some_event', { count: 3 });
 
 const HOME = content('pages.home');
 
