@@ -2,14 +2,12 @@ import React from 'react';
 import { withSiteData, Link } from 'react-static';
 import styled, { css } from 'react-emotion';
 import { map } from 'lodash';
-import { trackEvent } from '../../analytics';
 
 import content from '../../content';
 import { Section, Container } from '../commons';
 import { Icons } from '../../assets';
 import colors from '../../styles/colors';
 
-trackEvent('track_links');
 
 const PURECLASSES = {
   grid: 'pure-g',
@@ -19,15 +17,15 @@ const PURECLASSES = {
 const HOME = content('pages.home');
 
 const Grid = ({ items }) => (
-  < FeatureGrid className={PURECLASSES.grid}>
+  < FeatureGrid className={PURECLASSES.grid} >
     {map(items, ({ heading, subheading, id }) => (
-      <Link to={`/${id}`} id={id}>
+      <a href={`/${id}`} id={id} >
         <Square className={PURECLASSES.square}>
           <Icon src={Icons.bolt} alt="" />
           <Heading>{heading}</Heading>
           <Subheading>{subheading}</Subheading>
         </Square>
-      </Link>
+      </a>
     ))}
   </FeatureGrid >
 );
@@ -37,15 +35,15 @@ const FeatureGrid = styled.div`
   `;
 
 const Square = styled.div`
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    max-width: 90%;
-    margin: 20px auto 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  max-width: 90%;
+  margin: 20px auto 0;
   color: ${colors.LIGHTBROWN};
   @media (min-width: 576px) {
-      margin - top: 50px;
+    margin - top: 50px;
     padding: 1em;
     max-width: 100%;
   }

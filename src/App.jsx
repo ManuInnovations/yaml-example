@@ -4,11 +4,15 @@ import Routes from 'react-static-routes'; // eslint-disable-line
 import styled from 'react-emotion';
 import Nav from './components/Nav';
 import './styles/main.css';
-import { init as initAnalytics } from './analytics';
+import { init as initAnalytics, trackLinks, trackSessions, trackPageview, trackFormsubmit } from './analytics';
 
 const API_KEY = '084f7619004822cdbe3a3964fcef826ff75a226e';
 const API_URL = 'http://localhost:1000';
 initAnalytics(API_KEY, API_URL);
+trackLinks();
+trackSessions();
+trackPageview();
+trackFormsubmit();
 
 const Container = styled.div`
   position: absolute;
