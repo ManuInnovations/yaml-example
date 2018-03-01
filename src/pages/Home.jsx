@@ -5,7 +5,6 @@ import Landing from '../components/home/Landing';
 import Support from '../components/home/Support';
 import Features from '../components/home/Features';
 
-
 export default withSiteData(() => (
   <div>
     <Landing />
