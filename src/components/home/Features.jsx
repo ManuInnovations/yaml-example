@@ -19,13 +19,14 @@ const HOME = content('pages.home');
 const Grid = ({ items }) => (
   < FeatureGrid className={PURECLASSES.grid} >
     {map(items, ({ heading, subheading, id }) => (
-      <a href={`/${id}`} id={id} >
-        <Square className={PURECLASSES.square}>
+      <Square className={PURECLASSES.square}>
+        <Link to={`/${id}`} id={id} >
           <Icon src={Icons.bolt} alt="" />
           <Heading>{heading}</Heading>
           <Subheading>{subheading}</Subheading>
-        </Square>
-      </a>
+        </Link>
+
+      </Square>
     ))}
   </FeatureGrid >
 );
