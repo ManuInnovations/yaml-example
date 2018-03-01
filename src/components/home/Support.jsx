@@ -1,7 +1,10 @@
 import React from 'react';
 import styled from 'react-emotion';
+import content from '../../content';
 import colors from '../../styles/colors';
 import { Images } from '../../assets';
+
+const HOME = content('pages.home');
 
 const Section = styled.div`
   width: 100%;
@@ -71,13 +74,9 @@ const Support = () => (
   <Section>
     <Middle>
       <Container>
-        <MainText>We have a really great support team.</MainText>
-        <SubText>
-          We are proud of these humans in the Wellington office. Our customers love them.
-          </SubText>
-        <NewContent>
-          Link to new content
-          </NewContent>
+        <MainText>{HOME.supportMain}</MainText>
+        <SubText>{HOME.supportSub}</SubText>
+        <NewContent>{HOME.supportNew}</NewContent>
       </Container>
     </Middle>
   </Section>

@@ -1,18 +1,12 @@
 import React from 'react';
 import { withSiteData, Link } from 'react-static';
 import styled from 'react-emotion';
-import { trackEvent } from '../analytics';
 import { map } from 'lodash';
 import { Images } from '../assets';
-
 import content from '../content';
 import colors from '../styles/colors';
 import { Container } from './commons';
 import Burger from './NavBurger';
-
-// trackEvent('track_links');
-
-
 
 const CLASSES = {
   menu: 'pure-menu pure-menu-horizontal',

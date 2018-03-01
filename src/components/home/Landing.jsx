@@ -3,13 +3,7 @@ import { Link } from 'react-static';
 import styled from 'react-emotion';
 import { Images } from '../../assets';
 import content from '../../content';
-import { trackEvent } from '../../analytics';
 import colors from '../../styles/colors';
-
-trackEvent('component_loaded');
-trackEvent('track_sessions');
-trackEvent('track_pageview', 'pagename');
-trackEvent('track_errors');
 
 const HOME = content('pages.home');
 
@@ -214,8 +208,8 @@ const Landing = () => (
         <Author>{HOME.author}</Author>
       </HalfCol>
       <ActionButtons>
-        <Signup>Sign up now</Signup>
-        <Contact>Contact Us</Contact>
+        <Signup>{HOME.signup}</Signup>
+        <Contact>{HOME.contact}</Contact>
       </ActionButtons>
     </Container>
     <Roll src={Images.ballRoll} />
