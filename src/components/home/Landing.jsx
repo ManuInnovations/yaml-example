@@ -6,6 +6,7 @@ import content from '../../content';
 import colors from '../../styles/colors';
 
 const HOME = content('pages.home');
+const BUTTONS = content('buttons')
 
 const Section = styled.div`
   width: 100%;
@@ -208,8 +209,8 @@ const Landing = () => (
         <Author>{HOME.author}</Author>
       </HalfCol>
       <ActionButtons>
-        <Signup>{HOME.signup}</Signup>
-        <Contact>{HOME.contact}</Contact>
+        <Signup>{BUTTONS.signup}</Signup>
+        <Contact>{BUTTONS.contact}</Contact>
       </ActionButtons>
     </Container>
     <Roll src={Images.ballRoll} />

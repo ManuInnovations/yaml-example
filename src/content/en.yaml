@@ -1,15 +1,16 @@
 app:
   title: Thankyou Payroll
   copyright: Copyright © 2018 Thankyou Payroll.
-  login: Login
-  sign_up_now: Sign up now
-  contact_us_chat: Contact us for a chat
 menus:
   root: Home
   plans: Plans and Pricing
   how: How it works
   about: About us
   contact: Contact
+buttons:
+  login: Login
+  signup: Sign Up Now
+  contact: Contact Us
 pages:
   home: 
     landing_heading: >
@@ -56,8 +57,7 @@ pages:
                     education, retail, social services and many more.
         id: how
     author: Scott Patterson, Puraty Limited
-    signup: Sign Up Now
-    contact: Contact Us
+
     supportMain: We have a really great support team.
     supportSub: We are proud of these humans in the Wellington office. Our customers love them.
     supportNew: Link to new content
