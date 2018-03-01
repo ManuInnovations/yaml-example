@@ -1,6 +1,6 @@
 app:
   title: Thankyou Payroll
-buttons:
+  copyright: Copyright © 2018 Thankyou Payroll.
   login: Login
   sign_up_now: Sign up now
   contact_us_chat: Contact us for a chat

@@ -3,6 +3,7 @@ import { Router } from 'react-static';
 import Routes from 'react-static-routes'; // eslint-disable-line
 import styled from 'react-emotion';
 import Nav from './components/Nav';
+import Footer from './components/Footer';
 import './styles/main.css';
 import { init as initAnalytics, trackLinks, trackSessions, trackPageview, trackFormsubmit } from './analytics';
 
@@ -30,6 +31,8 @@ export default () => (
     <Container>
       <Nav />
       <Routes />
+      <Footer />
+
     </Container>
   </Router>
 );

@@ -68,7 +68,6 @@ const Burger = () => (
     <NavMenu right styles={styles}>
         <Menu items={MENUS} />
     </NavMenu>
-
 );
 
 export default Burger;
