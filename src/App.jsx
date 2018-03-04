@@ -5,7 +5,7 @@ import styled from 'react-emotion';
 import Nav from './components/Nav';
 import Footer from './components/Footer';
 import './styles/main.css';
-import { init as initAnalytics, trackLinks, trackSessions, trackPageview, trackFormsubmit } from './analytics';
+import { init as initAnalytics, trackLinks, trackSessions, trackPageview, trackFormsubmit, trackConversions } from './analytics';
 
 const API_KEY = '084f7619004822cdbe3a3964fcef826ff75a226e';
 const API_URL = 'http://localhost:1000';
@@ -14,6 +14,7 @@ trackLinks();
 trackSessions();
 trackPageview();
 trackFormsubmit();
+trackConversions();
 
 const Container = styled.div`
   position: absolute;
@@ -32,7 +33,6 @@ export default () => (
       <Nav />
       <Routes />
       <Footer />
-
     </Container>
   </Router>
 );
