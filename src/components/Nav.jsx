@@ -121,7 +121,8 @@ const Menu = ({ items }) => (
     <ul className={CLASSES.menuList}>
       {map(items, (label, path) => (
         <li key={`menu_${path}`} className={CLASSES.menuItem}>
-          <StyledLink className={CLASSES.menuLink}>{label}</StyledLink>
+          <StyledLink className={CLASSES.menuLink}><Link to={`${path}`}  >{label}</Link ></StyledLink>
+
         </li>
       ))}
     </ul>
