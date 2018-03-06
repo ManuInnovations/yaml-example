@@ -6,8 +6,9 @@ import Nav from './components/Nav';
 import Footer from './components/Footer';
 import './styles/main.css';
 import { init as initAnalytics, trackLinks, trackSessions, trackPageview, trackFormsubmit, trackConversions } from './analytics';
-import dotenv from 'dotenv'
-dotenv.config()
+
+const API_KEY = '084f7619004822cdbe3a3964fcef826ff75a226e';
+const API_URL = 'http://localhost:1000';
 
 initAnalytics(API_KEY, API_URL);
 trackLinks();
