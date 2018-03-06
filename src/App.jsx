@@ -8,7 +8,7 @@ import './styles/main.css';
 import { init as initAnalytics, trackLinks, trackSessions, trackPageview, trackFormsubmit, trackConversions } from './analytics';
 
 const API_KEY = '084f7619004822cdbe3a3964fcef826ff75a226e';
-const API_URL = 'http://localhost:1000';
+const API_URL = 'https://analytics.typayroll.co.nz/';
 
 initAnalytics(API_KEY, API_URL);
 trackLinks();
