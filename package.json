@@ -12,7 +12,8 @@
     "lint": "eslint \"src/**/*.js\"",
     "git:add": "git add .",
     "git:cz": "git cz",
-    "cz": "npm-run-all format lint git:add git:cz"
+    "cz": "npm-run-all format lint git:add git:cz",
+    "cypress:open": "cypress open"
   },
   "config": {
     "commitizen": {
@@ -20,8 +21,10 @@
     }
   },
   "dependencies": {
+    "countly-sdk-web": "^18.1.0",
     "emotion": "^9.0.0",
     "facepaint": "^1.2.1",
+    "jquery": "^3.3.1",
     "lodash": "^4.17.5",
     "react": "^16.2.0",
     "react-burger-menu": "^2.2.3",

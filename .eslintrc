@@ -1,6 +1,8 @@
 {
   "parser": "babel-eslint",
-  "extends": ["airbnb"],
+  "extends": [
+    "airbnb"
+  ],
   "rules": {
     "import/no-extraneous-dependencies": 1,
     "react/jsx-filename-extension": 0,
@@ -11,7 +13,8 @@
     "react/prop-types": 0
   },
   "globals": {
-    "fetch": true
+    "fetch": true,
+    "Countly": true
   },
   "env": {
     "jest": true,

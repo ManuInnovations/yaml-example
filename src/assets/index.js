@@ -9,6 +9,7 @@ import dash from './images/dashboard.png';
 import support from './images/background2.png';
 import menu from './images/hamburger.svg';
 import blob from './images/blob.png';
+import sorry from './images/sorry.jpg';
 
 const Images = {
   logo,
@@ -21,6 +22,7 @@ const Images = {
   support,
   menu,
   blob,
+  sorry,
 };
 const Icons = {
   bolt,

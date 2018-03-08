@@ -8,6 +8,8 @@ import colors from '../styles/colors';
 import { Container } from './commons';
 import Burger from './NavBurger';
 
+const login = content('buttons.login');
+
 const CLASSES = {
   menu: 'pure-menu pure-menu-horizontal',
   menuList: 'pure-menu-list',
@@ -119,7 +121,8 @@ const Menu = ({ items }) => (
     <ul className={CLASSES.menuList}>
       {map(items, (label, path) => (
         <li key={`menu_${path}`} className={CLASSES.menuItem}>
-          <StyledLink className={CLASSES.menuLink}>{label}</StyledLink>
+          <StyledLink className={CLASSES.menuLink}><Link to={`${path}`}  >{label}</Link ></StyledLink>
+
         </li>
       ))}
     </ul>
@@ -130,6 +133,7 @@ const Menu = ({ items }) => (
 
 export default withSiteData(() => {
   const MENUS = content('menus');
+
   return (
     <Section className={CLASSES.section}>
       <Container className={CLASSES.container} style={{ display: 'flex' }}>
@@ -138,7 +142,7 @@ export default withSiteData(() => {
         </NavLeft>
         <NavRight>
           <LoginButton className={CLASSES.button}>
-            {content('buttons.login').toUpperCase()}
+            {login}
           </LoginButton>
           <Burger />
         </NavRight>

@@ -14,6 +14,8 @@ Check out their Github repo here: https://github.com/nozzle/react-static
 
 ##Development##
 
+* yarn cz - run tests, lint, git add, git commit
+
 Set up routes in static.config.js
 
 Entry is from App.js
@@ -22,11 +24,11 @@ src > containers holds the separate pages
 
 To use an image in a component, export it first via assets > index.js
 
-##Bitbucket##
-Hosting Multiple Projects Under a Single Website
-You may have multiple projects that you want to host from the same Bitbucket websites, you can do this by placing each project in a repository subdirectory. In this example, you would want to organize things such that you can point users to:
+##Testing##
 
-https://accountname.bitbucket.io/subdir1forproject1
-https://accountname.bitbucket.io/subdir2forproject2
-https://accountname.bitbucket.io/subdir3forproject3
-Each project sub-directory would act as a self-contained website with its own index.html.
+After doing a Yarn install, or npm install, you should have access to Cypress.io.
+Start a new testing environment with (NOTE: npx rather than npm):
+
+* npx cypress open
+
+

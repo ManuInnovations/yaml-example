@@ -5,7 +5,8 @@ import { map } from 'lodash';
 import { Icons } from '../assets';
 import content from '../content';
 import colors from '../styles/colors';
-import { Section } from './commons';
+
+const APP = content('app');
 
 const Background = styled.div`
   background-color: ${colors.DARKBLUE};
@@ -22,11 +23,9 @@ const Background = styled.div`
 `;
 
 const Footer = () => (
-  <Section>
-    <Background>
-      Copyright &copy; 2018 Thankyou Payroll.
-    </Background>
-  </Section>
+  <Background>
+    {content('app.copyright')}
+  </Background>
 );
 
 export default Footer;

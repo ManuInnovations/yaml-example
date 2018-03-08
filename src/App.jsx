@@ -3,7 +3,19 @@ import { Router } from 'react-static';
 import Routes from 'react-static-routes'; // eslint-disable-line
 import styled from 'react-emotion';
 import Nav from './components/Nav';
+import Footer from './components/Footer';
 import './styles/main.css';
+import { init as initAnalytics, trackLinks, trackSessions, trackPageview, trackFormsubmit, trackConversions } from './analytics';
+
+const API_KEY = '084f7619004822cdbe3a3964fcef826ff75a226e';
+const API_URL = 'https://analytics.typayroll.co.nz/';
+
+initAnalytics(API_KEY, API_URL);
+trackLinks();
+trackSessions();
+trackPageview();
+trackFormsubmit();
+trackConversions();
 
 const Container = styled.div`
   position: absolute;
@@ -21,6 +33,7 @@ export default () => (
     <Container>
       <Nav />
       <Routes />
+      <Footer />
     </Container>
   </Router>
 );

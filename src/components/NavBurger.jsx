@@ -1,6 +1,9 @@
 import React from 'react'
 import { slide as NavMenu } from 'react-burger-menu'
 import { withSiteData, Link } from 'react-static'
+import { map } from 'lodash';
+import content from '../content';
+
 
 var styles = {
     bmBurgerButton: {
@@ -25,8 +28,9 @@ var styles = {
     },
     bmMenu: {
         background: 'rgba(0, 0, 0, 0.8)',
-        fontSize: '1.5em',
-        height: '100%'
+        fontSize: '1.2em',
+        height: '100%',
+        width: '100%',
     },
     bmMenuWrap: {
         top: '0'
@@ -36,7 +40,7 @@ var styles = {
     },
     bmItemList: {
         color: '#b8b7ad',
-        padding: '2em',
+        padding: '1em',
         letterSpacing: '1px',
         textAlign: 'center',
     },
@@ -45,15 +49,25 @@ var styles = {
     }
 }
 
+const MENUS = content('menus');
+
+
+const Menu = ({ items }) => (
+    <ul>
+        {map(items, (label, path) => (
+            <li className="menu-item" style={{ listStyleType: 'none', marginBottom: '1em' }}>
+                <Link to={`${path}`}  >
+                    {label}
+                </Link >
+            </li>
+        ))}
+    </ul>
+);
+
 const Burger = () => (
     <NavMenu right styles={styles}>
-        <Link to="/" className="menu-item" >Home</Link>
-        <Link to="/plans" className="menu-item" >Cost</Link>
-        <Link to="/how" className="menu-item">How it works</Link>
-        <Link to="/about" className="menu-item">About Us</Link>
-        <Link to="/contact" className="menu-item">Contact</Link>
+        <Menu items={MENUS} />
     </NavMenu>
-
 );
 
 export default Burger;
